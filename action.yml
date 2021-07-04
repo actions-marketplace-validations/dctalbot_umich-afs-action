@@ -1,0 +1,19 @@
+name: 'rsync push action'
+description: 'push local files to remote repo using rsync'
+inputs:
+  src:
+    description: 'which files to push'
+    required: true
+    default: './.'
+  dest:
+    description: 'where to push'
+    required: true
+outputs:
+  time:
+    description: 'The time we greeted you'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.src }}
+    - ${{ inputs.dest }}
