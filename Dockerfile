@@ -2,7 +2,8 @@
 FROM alpine:3.14.0
 
 # Install packages
-RUN apk add --no-cache rsync
+RUN apk update
+RUN apk add --no-cache rsync openssh-client
 
 # Copies your code file from your action repository to the filesystem path `/` of the container
 COPY entrypoint.sh /entrypoint.sh
