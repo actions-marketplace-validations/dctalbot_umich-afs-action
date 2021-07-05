@@ -19,7 +19,7 @@ jobs:
     name: checkout and rsync
     steps:
       - uses: actions/checkout@v2
-      - uses: dctalbot/rsync-action@v1.12
+      - uses: dctalbot/umich-afs-action@v2
         env:
           UNIQNAME: 'dctalbot'
           SSHPASS: ${{ secrets.SSHPASS }}
