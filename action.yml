@@ -4,20 +4,12 @@ inputs:
   ssh-private-key:
     description: "ssh private key"
     required: true
-  src:
-    description: "which files to push"
-    required: true
-    default: "./."
   dest:
     description: "where to push"
     required: true
-outputs:
-  time:
-    description: "The time we greeted you"
 runs:
   using: "docker"
   image: "Dockerfile"
   args:
     - ${{ inputs.ssh-private-key }}
-    - ${{ inputs.src }}
     - ${{ inputs.dest }}
