@@ -1,15 +1,5 @@
-name: "rsync push action"
+name: "umich afs deploy action"
 description: "push local files to remote repo using rsync"
-inputs:
-  # ssh-private-key:
-  #   description: "ssh private key"
-  #   required: true
-  dest:
-    description: "where to push"
-    required: true
 runs:
   using: "docker"
   image: "Dockerfile"
-  args:
-    # - ${{ inputs.ssh-private-key }}
-    - ${{ inputs.dest }}
