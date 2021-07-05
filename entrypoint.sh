@@ -1,6 +1,6 @@
 #!/bin/sh -l
 
-set -eu
+set -eux
 
 SSH_PATH="$HOME/.ssh"
 mkdir "$SSH_PATH"
