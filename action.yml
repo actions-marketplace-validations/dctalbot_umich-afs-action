@@ -1,5 +1,9 @@
-name: "umich afs deploy action"
-description: "push local files to remote repo using rsync"
+name: "Deploy to umich AFS"
+description: "Publish a webpage from on a GitHub repository"
+author: "dctalbot"
+branding:
+  icon: "arrow-up"
+  color: "blue"
 runs:
   using: "docker"
   image: "Dockerfile"
