@@ -4,6 +4,13 @@ author: "dctalbot"
 branding:
   icon: "arrow-up"
   color: "blue"
+inputs:
+  workspace-path:
+    description: "Path to deployable directory (no leading slash)"
+    required: false
+    default: "."
 runs:
   using: "docker"
   image: "Dockerfile"
+  args:
+    - ${{ inputs.workspace-path }}

@@ -20,9 +20,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: dctalbot/umich-afs-action@v2
+        with:
+          workspace-path: 'build'
         env:
           UNIQNAME: 'dctalbot'
           SSHPASS: ${{ secrets.SSHPASS }}
 ```
-
-**Disclaimer**: Read the code (see entrypoint.sh) before running it. Use at your own risk.
